@@ -1,15 +1,61 @@
 require("dotenv").config();
 const express = require("express");
-
+const morgan = require("morgan");
 const app = express();
 
-//get all restaurants
+// middleware to access body of req
+app.use(express.json());
+
+// get all restaurants
 app.get("/api/restaurants", (req, res) => {
   res.status(200).json({
     status: "success",
     data: {
       restaurant: ["Subway", "McDonald's"]
     }
+  });
+});
+
+// get a restaurant
+app.get("/api/restaurants/:id", (req, res) => {
+  console.log(req.params);
+
+  res.status(200).json({
+    status: "success",
+    data: {
+      restaurant: "McDonald's"
+    }
+  });
+});
+
+// create a restaurant
+app.post("/api/restaurants", (req, res) => {
+  console.log(req.body);
+
+  res.status(201).json({
+    status: "success",
+    data: {
+      restaurant: "McDonald's"
+    }
+  });
+});
+
+// update restaurant
+app.put("/api/restaurants:id", (req, res) => {
+  console.log(req.params.id);
+
+  res.status(200).json({
+    status: "success",
+    data: {
+      restaurant: "McDonald's"
+    }
+  });
+});
+
+// delete restaurant
+app.delete("/api/restaurants/:id", (req, res) => {
+  res.status(204).json({
+    status: "success"
   });
 });
 
