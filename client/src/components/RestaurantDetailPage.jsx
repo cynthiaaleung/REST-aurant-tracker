@@ -21,18 +21,16 @@ export default function RestaurantDetailPage() {
 
   return (
     <div>
+      {selectedRestaurant && (
       <>
         <h2 className="text-center display-5">
           {selectedRestaurant.restaurant.name}
         </h2>
-      </>
-      {selectedRestaurant && (
-        <>
           <div className="mt-3">
             <Reviews reviews={selectedRestaurant.reviews}/>
             <AddReview/>
           </div>
-        </>
+      </>
       )}
     </div>
   )
