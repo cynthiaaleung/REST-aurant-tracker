@@ -21,6 +21,11 @@ export default function RestaurantDetailPage() {
 
   return (
     <div>
+      <>
+        <h2 className="text-center display-5">
+          {selectedRestaurant.restaurant.name}
+        </h2>
+      </>
       {selectedRestaurant && (
         <>
           <div className="mt-3">
