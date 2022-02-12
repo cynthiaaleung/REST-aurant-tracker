@@ -17,6 +17,16 @@ export default function RestaurantList(props) {
     fetchData();
   }, [])
 
+  const handleDelete = async (id) => {
+    try {
+      const response = await restaurantFinder.delete(`/${id}`);
+      // set restaurant state to only show restaurants that is not the one clicked ("id")
+      setRestaurants(restaurants.filter(restaurant => {
+        return restaurant.id !== id;
+      }))
+    } catch (err) {}
+  }
+
   return (
     <div className="list-group">
       <table className="table table-hover table-dark">
@@ -43,7 +53,9 @@ export default function RestaurantList(props) {
                     <button className="btn btn-warning">Update</button>
                   </td>
                   <td>
-                    <button className="btn btn-danger">Delete</button>
+                    <button 
+                      onClick={() => handleDelete(restaurant.id)}
+                      className="btn btn-danger">Delete</button>
                   </td>
                 </tr>
               )
