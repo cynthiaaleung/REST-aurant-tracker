@@ -1,7 +1,11 @@
+import Header from "./Header"
+import AddRestaurant from "./AddRestaurant"
+
 export default function Home() {
   return (
     <div>
-      Home Page
+      <Header/>
+      <AddRestaurant/>
     </div>
   )
 }
