@@ -70,7 +70,7 @@ app.post("/api/restaurants", async(req, res) => {
 });
 
 // update restaurant
-app.put("/api/restaurants:id", async(req, res) => {
+app.put("/api/restaurants/:id", async(req, res) => {
 
   try {
     const results = await db.query(
