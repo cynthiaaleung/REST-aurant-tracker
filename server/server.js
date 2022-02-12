@@ -11,50 +11,74 @@ app.use(express.json());
 // get all restaurants
 app.get("/api/restaurants", async(req, res) => {
 
-  const results = await db.query("SELECT * FROM restaurants");
+  try {
+    const results = await db.query(
+      "SELECT * FROM restaurants"
+    );
+  
+    res.status(200).json({
+      status: "success",
+      results: results.rows.length,
+      data: {
+        restaurants: results.rows
+      }
+    });
+  } catch (err) {
+    console.log(err);
+  }
 
-  console.log(results);
-
-  res.status(200).json({
-    status: "success",
-    data: {
-      restaurant: ["Subway", "McDonald's"]
-    }
-  });
 });
 
 // get a restaurant
-app.get("/api/restaurants/:id", (req, res) => {
-  console.log(req.params);
+app.get("/api/restaurants/:id", async(req, res) => {
 
-  res.status(200).json({
-    status: "success",
-    data: {
-      restaurant: "McDonald's"
-    }
-  });
+  try {
+    const results = await db.query(
+      "SELECT * FROM restaurants WHERE id = $1",
+      [req.params.id]
+      // $1 is replaced with req.params.id to prevent SQL injection
+    );
+
+    res.status(200).json({
+      status: "success",
+      data: {
+        restaurants: results.rows[0]
+      }
+    });
+    
+  } catch (err) {
+    console.log(err);
+  }
 });
 
 // create a restaurant
-app.post("/api/restaurants", (req, res) => {
+app.post("/api/restaurants", async(req, res) => {
   console.log(req.body);
 
-  res.status(201).json({
-    status: "success",
-    data: {
-      restaurant: "McDonald's"
-    }
-  });
+  try {
+    const results = await db.query(
+      "INSERT INTO restaurants (name, location, price_range) values ($1, $2, $3) returning *",
+      [req.body.name, req.body.location, req.body.price_range]);
+
+    res.status(201).json({
+      status: "success",
+      data: {
+        restaurants: results.rows[0]
+      }
+    });
+  } catch (err) {
+    console.log(err);
+  }
+
 });
 
 // update restaurant
 app.put("/api/restaurants:id", (req, res) => {
-  console.log(req.params.id);
 
   res.status(200).json({
     status: "success",
     data: {
-      restaurant: "McDonald's"
+      restaurants: "McDonald's"
     }
   });
 });
