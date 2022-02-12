@@ -1,8 +1,8 @@
-import {BrowserRouter as Router, Route, Routes} from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Home from "./components/Home";
 import UpdatePage from "./components/UpdatePage";
 import RestaurantDetailPage from "./components/RestaurantDetailPage";
-import { RestaurantsContextProvider } from "./context/RestaurantsContext";
+import { RestaurantsContextProvider } from "./context/restaurantsContext";
 
 export default function App() {
   return (

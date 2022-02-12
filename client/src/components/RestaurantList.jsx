@@ -1,4 +1,22 @@
-export default function RestaurantList() {
+import { useContext, useEffect } from "react";
+import restaurantFinder from "../apis/restaurantFinder";
+import { RestaurantsContext } from "../context/restaurantsContext";
+
+export default function RestaurantList(props) {
+
+  const { restaurants, setRestaurants } = useContext(RestaurantsContext);
+
+  useEffect(() => {
+    const fetchData = async() => {
+      try {
+        // this will be added to the end of baseURL in restaurantFinder.js, in this case, adding "/"
+        const response = await restaurantFinder.get("/");
+        setRestaurants(response.data.data.restaurants);
+      } catch (err) {}
+    }
+    fetchData();
+  }, [])
+
   return (
     <div className="list-group">
       <table className="table table-hover table-dark">
