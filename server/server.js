@@ -40,7 +40,7 @@ app.get("/api/restaurants/:id", async(req, res) => {
     );
 
     const reviews = await db.query(
-      "SELECT * FROM reviews WHERE id = $1",
+      "SELECT * FROM reviews WHERE restaurant_id = $1",
       [req.params.id]
     );
 
