@@ -5,7 +5,7 @@ import RestaurantDetailPage from "./components/RestaurantDetailPage";
 
 export default function App() {
   return (
-    <div>
+    <div className="container">
       <Router>
         <Routes>
           <Route exact path="/" element={<Home/>}/>

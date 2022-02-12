@@ -1,5 +1,3 @@
-
-
 export default function AddRestaurant() {
   return (
     <div className="mb-4">
