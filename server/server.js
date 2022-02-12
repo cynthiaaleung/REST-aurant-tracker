@@ -1,10 +1,12 @@
 require("dotenv").config();
 
 const express = require("express");
+const cors = require("cors");
 const db = require("./db");
 const morgan = require("morgan");
 const app = express();
 
+app.use(cors());
 // middleware to access body of req
 app.use(express.json());
 
