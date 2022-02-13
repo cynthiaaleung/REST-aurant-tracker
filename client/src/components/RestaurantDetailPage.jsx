@@ -28,7 +28,7 @@ export default function RestaurantDetailPage() {
           {selectedRestaurant.restaurant.name}
         </h2>
         <div className="text-center">
-          <StarRating rating ={selectedRestaurant.restaurant.average_rating}/>
+          <StarRating rating={selectedRestaurant.restaurant.average_rating}/>
           <span className="text-warning ml-1">
             {selectedRestaurant.restaurant.count 
             ? `(${selectedRestaurant.restaurant.count})` 
