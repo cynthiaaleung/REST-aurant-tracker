@@ -101,7 +101,7 @@ app.delete("/api/restaurants/:id", async(req, res) => {
 
   try {
     const results = await db.query(
-      "DELETE FROM restaurants WHERE id = $1 ",
+      "DELETE FROM restaurants WHERE id = $1",
       [req.params.id]
     );
     res.status(204).json({
@@ -113,7 +113,7 @@ app.delete("/api/restaurants/:id", async(req, res) => {
 });
 
 // add a new review
-app.post("/api/restaurants/:id/AddReview", async (req, res) => {
+app.post("/api/restaurants/:id/addReview", async (req, res) => {
   try {
     const newReview = await db.query(
       "INSERT INTO reviews (restaurant_id, name, review, rating) values ($1, $2, $3, $4) RETURNING *",
