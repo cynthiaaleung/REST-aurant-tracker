@@ -30,6 +30,10 @@ https://user-images.githubusercontent.com/81842196/153780614-98732333-d779-466e-
 
 https://user-images.githubusercontent.com/81842196/153780620-c6f234fc-0294-4751-ad1f-d2846d105f35.mp4
 
+### Review page view
+
+!["Review page"](https://github.com/cynthiaaleung/restaurant-finder/blob/main/docs/restaurant-reviews.png?raw=true)
+
 ### Delete a restaurant
 
 https://user-images.githubusercontent.com/81842196/153780638-e600cba5-943b-4c2d-b7de-22b8307f74f5.mp4
