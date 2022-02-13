@@ -70,7 +70,7 @@ export default function RestaurantList(props) {
             <th scope="col">Restaurant</th>
             <th scope="col">Location</th>
             <th scope="col">Price Range</th>
-            <th scope="col">Ratings</th>
+            <th scope="col">Rating</th>
             <th scope="col">Edit</th>
             <th scope="col">Delete</th>
           </tr>

@@ -24,7 +24,7 @@ export default function RestaurantDetailPage() {
     <div>
       {selectedRestaurant && (
       <>
-        <h2 className="text-center display-5">
+        <h2 className="text-center display-5 font-weight-light">
           {selectedRestaurant.restaurant.name}
         </h2>
         <div className="text-center">
