@@ -20,7 +20,7 @@ Restaurant Tracker is a full-stack application where users can view ratings and 
 
 ### Create a new restaurant
 
-Users can add a restaurant to the list by entering the name, location and rating.
+Users can add a restaurant to the list by entering the name, location and price range.
 
 https://user-images.githubusercontent.com/81842196/153780608-cecf7d00-b3a3-42fa-94b2-876d142ec991.mp4
 
