@@ -15,7 +15,9 @@ export default function RestaurantDetailPage() {
       try {
         const response = await restaurantFinder.get(`/${id}`);
         setSelectedRestaurant(response.data.data);
-      } catch (err) {}
+      } catch (err) {
+        console.log(err);
+      }
     }
     fetchData();
   }, [])

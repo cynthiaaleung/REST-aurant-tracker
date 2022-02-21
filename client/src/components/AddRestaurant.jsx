@@ -20,7 +20,9 @@ export default function AddRestaurant() {
         price_range: priceRange
       });
       addRestaurants(response.data.data.restaurant);
-    } catch (err) {}
+    } catch (err) {
+      console.log(err);
+    }
   }
 
   return (

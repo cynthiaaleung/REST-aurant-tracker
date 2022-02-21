@@ -16,7 +16,9 @@ export default function RestaurantList(props) {
         // this will be added to the end of baseURL in restaurantFinder.js, in this case, adding "/"
         const response = await restaurantFinder.get("/");
         setRestaurants(response.data.data.restaurants);
-      } catch (err) {}
+      } catch (err) {
+        console.log(err);
+      }
     }
     fetchData();
   }, [])
@@ -30,7 +32,9 @@ export default function RestaurantList(props) {
       setRestaurants(restaurants.filter(restaurant => {
         return restaurant.id !== id;
       }))
-    } catch (err) {}
+    } catch (err) {
+      console.log(err);
+    }
   }
 
   const handleUpdate = async (e, id) => {
@@ -38,8 +42,9 @@ export default function RestaurantList(props) {
     
     try {
       navigate(`/restaurants/${id}/update`);
-
-    } catch (err) {}
+    } catch (err) {
+      console.log(err);
+    }
   }
 
   const handleRestaurantSelect = (id) => {

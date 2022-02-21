@@ -20,7 +20,9 @@ export default function AddReview() {
       rating: rating
     });
     window.location.reload();
-    } catch (err) {}
+    } catch (err) {
+      console.log(err);
+    }
   }
 
   return (
