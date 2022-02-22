@@ -2,20 +2,6 @@
 
 Restaurant Tracker is a full-stack application where users can view ratings and reviews of restaurants, add their own restaurant, update restaurant details, add a review and delete restaurants.
 
-## Dependencies & Tech Stack
-
-* JavaScript
-* PostgreSQL
-* Express.js
-* Node.js
-* Axios
-* Cors
-* React
-* React DOM
-* React Router DOM
-* HTML
-* Bootstrap
-
 ## Final Product
 
 ### Create a new restaurant
@@ -42,3 +28,16 @@ This is another example of what the review page looks like when it contains more
 
 !["Review page"](https://github.com/cynthiaaleung/restaurant-finder/blob/main/docs/restaurant-reviews.png?raw=true)
 
+## Dependencies & Tech Stack
+
+* JavaScript
+* PostgreSQL
+* Express.js
+* Node.js
+* Axios
+* Cors
+* React
+* React DOM
+* React Router DOM
+* HTML
+* Bootstrap
