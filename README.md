@@ -28,7 +28,7 @@ This is another example of what the review page looks like when it contains more
 
 !["Review page"](https://github.com/cynthiaaleung/restaurant-finder/blob/main/docs/restaurant-reviews.png?raw=true)
 
-## Dependencies & Tech Stack
+## Tech Stack & Dependencies
 
 * JavaScript
 * PostgreSQL
